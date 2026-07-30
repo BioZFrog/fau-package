@@ -1,0 +1,16 @@
+[project]
+name = "fau"
+version = "0.1.0"
+description = "Developer tools for prepping code for AI"
+dependencies = [
+    "click",
+    "pyperclip",
+    "rich"
+]
+
+[project.scripts]
+fau = "fau.cli:cli"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
