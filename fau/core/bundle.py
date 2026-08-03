@@ -7,8 +7,11 @@ def copy_file_to_clipboard(file_path):
     """Copies a file to the clipboard by safely invoking the native Windows Shell."""
     abs_path = os.path.abspath(file_path)
     subprocess.run(
-        ["powershell.exe", "-NoProfile", "-Command", "Set-Clipboard", "-Path", abs_path],
-        creationflags=subprocess.CREATE_NO_WINDOW
+        ["powershell.exe", "-NoProfile", "-Command", f'Set-Clipboard -Path "{abs_path}"'],
+        creationflags=subprocess.CREATE_NO_WINDOW,
+        check=True,
+        capture_output=True,
+        text=True
     )
     time.sleep(0.5)
 
