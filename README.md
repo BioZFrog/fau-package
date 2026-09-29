@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="icon.png" width="400" alt="fau cover">
+</p>
+
 # 🚀 fau
 
 > **Stop fighting your terminal. Start talking to AI.**
